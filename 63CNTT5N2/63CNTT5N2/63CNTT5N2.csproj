@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -121,12 +127,22 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SupplierController.cs" />
     <Compile Include="Controllers\SiteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Library\XMessage.cs" />
+    <Compile Include="Library\XString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -137,6 +153,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Public\css\jquery.dataTables.css" />
     <Content Include="Public\css\main.css" />
     <Content Include="Public\css\style.css" />
     <Content Include="Public\dist\css\adminlte.css" />
@@ -296,6 +313,7 @@
     <Content Include="Public\img\r7.jpg" />
     <Content Include="Public\img\r8.jpg" />
     <Content Include="Public\img\r9.jpg" />
+    <Content Include="Public\js\jquery.dataTables.js" />
     <Content Include="Public\js\main.js" />
     <Content Include="Public\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
     <Content Include="Public\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
@@ -2557,9 +2575,6 @@
     <Content Include="Public\vendors\themify-icons\fonts\themify.ttf" />
     <Content Include="Public\vendors\themify-icons\fonts\themify.woff" />
     <Content Include="Public\vendors\themify-icons\Themify IconFonts 5-23-2014.json" />
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
     <Content Include="Public\dist\css\adminlte.css.map" />
     <Content Include="Public\dist\css\adminlte.min.css.map" />
     <Content Include="Public\dist\css\alt\adminlte.components.css.map" />
@@ -2638,6 +2653,32 @@
     <Content Include="Public\plugins\summernote\summernote.js.map" />
     <Content Include="Public\plugins\summernote\summernote.min.js.map" />
     <Content Include="Public\plugins\toastr\toastr.js.map" />
+    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\Message.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Trash.cshtml" />
+    <Content Include="Areas\Admin\Views\Supplier\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Supplier\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Supplier\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Supplier\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Supplier\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Supplier\Trash.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Trash.cshtml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2664,6 +2705,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Public\img\supplier\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2677,6 +2719,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyClass\MyClass.csproj">
+      <Project>{f5791a56-bdc4-4216-b1a2-2f93b3bc4f50}</Project>
+      <Name>MyClass</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

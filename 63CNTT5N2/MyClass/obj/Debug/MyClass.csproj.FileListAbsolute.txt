@@ -1,0 +1,12 @@
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\bin\Debug\MyClass.dll.config
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\bin\Debug\MyClass.dll
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\bin\Debug\MyClass.pdb
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\bin\Debug\EntityFramework.dll
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\bin\Debug\EntityFramework.xml
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\obj\Debug\MyClass.csproj.AssemblyReference.cache
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\obj\Debug\MyClass.csproj.CoreCompileInputs.cache
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\obj\Debug\MyClass.csproj.CopyComplete
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\obj\Debug\MyClass.dll
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\MyClass\obj\Debug\MyClass.pdb

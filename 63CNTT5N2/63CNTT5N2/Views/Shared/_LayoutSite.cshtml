@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html>
 <head>
+    <title>@Page.Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aroma Shop - Home</title>
-    <link rel="icon" href="Public/img/Fevicon.png" type="image/png">
+    <link rel="icon" href="img/Fevicon.png" type="image/png">
     <link rel="stylesheet" href="Public/vendors/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="Public/vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="Public/vendors/themify-icons/themify-icons.css">
@@ -14,9 +16,10 @@
     <link rel="stylesheet" href="Public/vendors/owl-carousel/owl.carousel.min.css">
 
     <link rel="stylesheet" href="Public/css/style.css">
-    <title>@Page.Title</title>
+
     @RenderSection("head", required: false)
 </head>
+
 <body>
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
@@ -75,6 +78,7 @@
         </div>
     </header>
     <!--================ End Header Menu Area =================-->
+
     @RenderBody()
 
     <!--================ Start footer Area  =================-->
@@ -168,6 +172,7 @@
         </div>
     </footer>
     <!--================ End footer Area  =================-->
+
     <script src="Public/vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="Public/vendors/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="Public/vendors/skrollr.min.js"></script>

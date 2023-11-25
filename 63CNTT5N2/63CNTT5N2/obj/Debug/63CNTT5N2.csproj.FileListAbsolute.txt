@@ -77,3 +77,10 @@ D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\obj\Debug\63CNTT5N2
 D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\obj\Debug\63CNTT5N2.csproj.CopyComplete
 D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\obj\Debug\63CNTT5N2.dll
 D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\obj\Debug\63CNTT5N2.pdb
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\bin\EntityFramework.dll
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\bin\EntityFramework.SqlServer.dll
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\bin\MyClass.dll
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\bin\MyClass.pdb
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\bin\MyClass.dll.config
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\bin\EntityFramework.xml
+D:\Dai Hoc\Phat Trien Ung Dung Web\PTUDW\63CNTT5N2\63CNTT5N2\bin\EntityFramework.SqlServer.xml
