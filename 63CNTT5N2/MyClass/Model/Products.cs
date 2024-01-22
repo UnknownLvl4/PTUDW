@@ -71,5 +71,11 @@ namespace MyClass.Model
         [Required(ErrorMessage = "Trạng thái không được để trống")]
         [Display(Name = "Trạng thái")]
         public int? Status { get; set; }
+
+        [ForeignKey("CatId")]
+        public virtual Categories Category { get; set; }
+
+        [ForeignKey("SupplierId")]
+        public virtual Suppliers Supplier { get; set; }
     }
 }

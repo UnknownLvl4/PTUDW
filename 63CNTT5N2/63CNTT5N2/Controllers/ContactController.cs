@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MyClass.Model;
+
 namespace _63CNTT5N2.Controllers
 {
-    public class SiteController : Controller
+    public class ContactController : Controller
     {
-        // GET: Site
+        // GET: Contact
         public ActionResult Index()
         {
-            
-            return View();
+            return View("Contact");
         }
     }
 }
